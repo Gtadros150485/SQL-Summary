@@ -1,0 +1,144 @@
+//select all records from a table
+
+select * from table_name;
+//important sql commands
+
+SELECT - extracts data from a database
+UPDATE - updates data in a database
+DELETE - deletes data from a database
+INSERT INTO - inserts new data into a database
+CREATE DATABASE - creates a new database
+ALTER DATABASE - modifies a database
+CREATE TABLE - creates a new table
+ALTER TABLE - modifies a table
+DROP TABLE - deletes a table
+CREATE INDEX - creates an index (search key)
+DROP INDEX - deletes an index
+
+//select columns from tables
+select col1,col2 from table_name;
+
+//select distinct from a table
+select distinct col1,col2 from table_name;
+
+//select where condition
+select col1,col1, from table_name where condition;
+
+//order by
+select col1,col2 from table_name order by col_name1 DESC/ASC,col_name2 DESC/ASC;
+
+//and-or-not clause
+select col from table_name where = condition and/or/not condition;
+//INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...);
+
+//null values
+select col from table_name where column_name is not null;
+
+//update 
+update col set col=value were = condition;
+//delete 
+delete from table_name where condition;
+//select top 3* from table_name
+select top 3 * from Customers;
+
+MIN() - returns the smallest value within the selected column
+MAX() - returns the largest value within the selected column
+COUNT() - returns the number of rows in a set
+SUM() - returns the total sum of a numerical column
+AVG() - returns the average value of a numerical column
+
+//sum function
+select sun(col) from table_name;
+
+//select statement 
+select col1,col2 as name from table_name group by table_names
+
+// function avg
+select avg(col) from table_name where = condition
+
+//select like statement
+select * from table_name
+where col LIKE '[a-f]%';
+//select between
+select * from col
+where col between val1 and val2; 
+
+//join examples
+(INNER) JOIN: Returns records that have matching values in both tables
+LEFT (OUTER) JOIN: Returns all records from the left table, and the matched records from the right table
+RIGHT (OUTER) JOIN: Returns all records from the right table, and the matched records from the left table
+FULL (OUTER) JOIN: Returns all records when there is a match in either left or right table
+
+//nested queries
+select column_name(s)
+from table_name
+where column_name operator any (select column_name, from table_name, where condition);
+
+//copying data 
+select * into newtable [IN externaldb] from oldtable where condition;
+
+//case or switch case as known in programming
+case
+    when condition1 then result1
+    WHEN condition2 then result2
+    WHEN conditionN then resultN
+    else result
+end;
+
+//select col1, col2 * (col + UnitsOnOrder)
+from table_name;
+
+//having a comment 
+-- Select all:
+
+//creating a database
+create a database database_name
+
+//drop database
+drop database;
+
+//creating a table in db
+create table table_name (
+    PersonID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+
+//trancuate and drop table
+trancuate database hat delete data in database
+trancuate table_name; 
+//drop delete the database itself
+drop table_name;
+//alter modify table add column example
+Alter table table_name add column_name datatype
+
+//constrains in database
+NOT NULL - Ensures that a column cannot have a NULL value
+UNIQUE - Ensures that all values in a column are different
+PRIMARY KEY - A combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table
+FOREIGN KEY - Prevents actions that would destroy links between tables
+CHECK - Ensures that the values in a column satisfies a specific condition
+DEFAULT - Sets a default value for a column if no value is specified
+CREATE INDEX - Used to create and retrieve data from the database very quickly
+//sql datatypes
+MySQL comes with the following data types for storing a date or a date/time value in the database:
+
+DATE - format YYYY-MM-DD
+DATETIME - format: YYYY-MM-DD HH:MI:SS
+TIMESTAMP - format: YYYY-MM-DD HH:MI:SS
+YEAR - format YYYY or YY
+SQL Server comes with the following data types for storing a date or a date/time value in the database:
+
+DATE - format YYYY-MM-DD
+DATETIME - format: YYYY-MM-DD HH:MI:SS
+SMALLDATETIME - format: YYYY-MM-DD HH:MI:SS
+TIMESTAMP - format: a unique number
+
+//create view statement 
+CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
